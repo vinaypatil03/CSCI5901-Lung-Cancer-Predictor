@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Lung Cancer - Predictor</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+
+    <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+</head>
+<body class="bg-light">
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <h2>Lung Cancer Detector</h2>
+        </div>
+
+        <div class="row g-5">
+            <div>
+                <h4 class="mb-3">Enter Details</h4>
+                <form action="/get-data" method="POST">
+                    <div class="row g-3">
+                        <div class="col-sm-3">
+                            <label for="GENDER" class="form-label">GENDER</label>
+                            <select class="form-select" id="GENDER" name="GENDER" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="AGE" class="form-label">AGE</label>
+                            <input type="number" class="form-control" id="AGE" name="AGE" placeholder="" value="" required>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="SMOKING" class="form-label">SMOKING</label>
+                            <select class="form-select" id="SMOKING" name="SMOKING" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="YELLOW_FINGERS" class="form-label">YELLOW_FINGERS</label>
+                            <select class="form-select" id="YELLOW_FINGERS" name="YELLOW_FINGERS" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="ANXIETY" class="form-label">ANXIETY</label>
+                            <select class="form-select" id="ANXIETY" name="ANXIETY" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="PEER_PRESSURE" class="form-label">PEER_PRESSURE</label>
+                            <select class="form-select" id="PEER_PRESSURE" name="PEER_PRESSURE" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="CHRONIC_DISEASE" class="form-label">CHRONIC_DISEASE</label>
+                            <select class="form-select" id="CHRONIC_DISEASE" name="CHRONIC_DISEASE" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="FATIGUE" class="form-label">FATIGUE</label>
+                            <select class="form-select" id="FATIGUE" name="FATIGUE" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="ALLERGY" class="form-label">ALLERGY</label>
+                            <select class="form-select" id="ALLERGY" name="ALLERGY" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="WHEEZING" class="form-label">WHEEZING</label>
+                            <select class="form-select" id="WHEEZING" name="WHEEZING" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="ALCOHOL_CONSUMING" class="form-label">ALCOHOL_CONSUMING</label>
+                            <select class="form-select" id="ALCOHOL_CONSUMING" name="ALCOHOL_CONSUMING" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="COUGHING" class="form-label">COUGHING</label>
+                            <select class="form-select" id="COUGHING" name="COUGHING" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="SHORTNESS_OF_BREATH" class="form-label">SHORTNESS_OF_BREATH</label>
+                            <select class="form-select" id="SHORTNESS_OF_BREATH" name="SHORTNESS_OF_BREATH" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="SWALLOWING_DIFFICULTY" class="form-label">SWALLOWING_DIFFICULTY</label>
+                            <select class="form-select" id="SWALLOWING_DIFFICULTY" name="SWALLOWING_DIFFICULTY"
+                                    required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="CHEST_PAIN" class="form-label">CHEST_PAIN</label>
+                            <select class="form-select" id="CHEST_PAIN" name="CHEST_PAIN" required>
+                                <option disabled selected>Select Option</option>
+                                <option value="2">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <button class="w-10 btn btn-primary btn-lg" type="submit">Predict</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; Dalhousie University</p>
+        <p class="mb-2">&copy; B00911203 - Vinay Vilas Patil</p>
+    </footer>
+</div>
+
+
+<script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+<script src="form-validation.js"></script>
+</body>
+</html>

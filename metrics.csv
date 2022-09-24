@@ -1,0 +1,4 @@
+batch_size,ephocs,date,accuracy,training_time
+32,150,09-Aug-2022,0.785,1.428
+32,150,10-Aug-2022,0.84,2.871
+32,150,10-Aug-2022,0.811,2.154
